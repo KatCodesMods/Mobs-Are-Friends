@@ -1,25 +1,25 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "dev.katcodes",
+		"id": "mobs_are_friends",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "Mobs are Friends",
+			"description": "A simple mod meant to make all hostile mobs it can friendly",
 			"contributors": {
-				"Your name here": "Owner"
+				"KatGaea": "Owner"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-template-mod"
+				"homepage": "https://katcodes.dev",
+				"issues": "https://github.com/KatCodesMods/Mobs-Are-Friends/issues",
+				"sources": "https://github.com/KatCodesMods/Mobs-Are-Friends/"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/mobs_are_friends/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"init": "dev.katcodes.mobs_are_friends.FriendMobsMod"
 		},
 		"depends": [
 			{
@@ -36,5 +36,5 @@
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "mobs_are_friends.mixins.json"
 }
