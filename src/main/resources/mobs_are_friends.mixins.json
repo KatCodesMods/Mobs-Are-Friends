@@ -8,9 +8,9 @@
     "TitleScreenMixin",
     "TargetGoalMixin",
     "EndermanEntityMixin",
-    "WardenBrainMixin"
+    "WardenEntityMixin"
   ],
-  "server": ["TargetGoalMixin", "EndermanEntityMixin", "WardenBrainMixin"],
+  "server": ["TargetGoalMixin", "EndermanEntityMixin", "WardenEntityMixin"],
   "injectors": {
     "defaultRequire": 1
   }

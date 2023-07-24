@@ -21,11 +21,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.event.listener.GameEventListener;
 
-@Mixin(WardenBrain.class)
+@Mixin(WardenEntity.class)
 public abstract class WardenEntityMixin {
 
 	@Inject(method = "isEnemy", at = @org.spongepowered.asm.mixin.injection.At("HEAD"), cancellable = true)
-	private static void inject(@Nullable Entity entity, CallbackInfoReturnable<Boolean> ci) {
+	private  void inject(@Nullable Entity entity, CallbackInfoReturnable<Boolean> ci) {
+		FriendMobsMod.LOGGER.info("isEnemy");
 		ci.setReturnValue(false);
 
 	}
