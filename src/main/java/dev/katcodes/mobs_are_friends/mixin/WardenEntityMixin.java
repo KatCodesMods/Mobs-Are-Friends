@@ -22,20 +22,12 @@ import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.event.listener.GameEventListener;
 
 @Mixin(WardenBrain.class)
-public abstract class WardenBrainMixin {
+public abstract class WardenEntityMixin {
 
-	@Inject(method = "<clinit>", at = @org.spongepowered.asm.mixin.injection.At("TAIL"))
-	private static void inject(CallbackInfo ci) {
-		FriendMobsMod.LOGGER.info("WardenEntitySensorMixin");
-		FriendMobsMod.LOGGER.info(Integer.toString(getSensors().size()));
-		getSensors().clear();
-		getSensors().add(0,SensorType.DUMMY);
+	@Inject(method = "isEnemy", at = @org.spongepowered.asm.mixin.injection.At("HEAD"), cancellable = true)
+	private static void inject(@Nullable Entity entity, CallbackInfoReturnable<Boolean> ci) {
+		ci.setReturnValue(false);
 
 	}
 
-
-	@Accessor("SENSORS")
-	public static List<SensorType<? extends Sensor<? super WardenEntity>>> getSensors() {
-		throw new AssertionError();
-	}
 }
