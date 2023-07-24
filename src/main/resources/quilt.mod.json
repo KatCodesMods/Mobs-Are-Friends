@@ -7,6 +7,7 @@
 		"metadata": {
 			"name": "Mobs are Friends",
 			"description": "A simple mod meant to make all hostile mobs it can friendly",
+			"license": "CC-BY-SA-4.0",
 			"contributors": {
 				"KatGaea": "Owner"
 			},

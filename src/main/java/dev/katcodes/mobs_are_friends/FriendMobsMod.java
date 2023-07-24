@@ -20,5 +20,6 @@ public class FriendMobsMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
+
 	}
 }
